@@ -329,7 +329,7 @@ static void Main()
 {
     RevealSdkSettings.DataSources.RegisterMicrosoftSqlServer();
     RevealSdkSettings.AuthenticationProvider = new Reveal.AuthenticationProvider();
-    **RevealSdkSettings.DataSourceProvider = new Reveal.DataSourceProvider();**
+    RevealSdkSettings.DataSourceProvider = new Reveal.DataSourceProvider();
 
 	...
 }
@@ -445,10 +445,10 @@ private void RevealView_DataSourcesRequested(object sender, DataSourcesRequested
 	// so the dataSources array will remain empty
     //dataSources.Add(sqlDataSource);
 
-    AddSqlServerItem(dataSourceItems, sqlDataSource, 	"TenMostExpensiveProducts", "Ten Most Expensive Products");
-	  AddSqlServerItem(dataSourceItems, sqlDataSource, "Customers", "Customers");
-	  AddSqlServerItem(dataSourceItems, sqlDataSource, "OrdersQry", "All Customer Orders");
-  	AddSqlServerItem(dataSourceItems, sqlDataSource, "OrdersByEmployee", "Orders by Employee");
+	AddSqlServerItem(dataSourceItems, sqlDataSource, "TenMostExpensiveProducts", "Ten Most Expensive Products");
+	AddSqlServerItem(dataSourceItems, sqlDataSource, "Customers", "Customers");
+	AddSqlServerItem(dataSourceItems, sqlDataSource, "OrdersQry", "All Customer Orders");
+	AddSqlServerItem(dataSourceItems, sqlDataSource, "OrdersByEmployee", "Orders by Employee");
 
     e.Callback(new RevealDataSources(dataSources, dataSourceItems, false));
 }
