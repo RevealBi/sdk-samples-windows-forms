@@ -118,7 +118,7 @@ private void LoadDashboard(string dashboardId)
         {
             if (stream != null)
             {
-				_revealView.HoverTooltipsEnabled = true;
+		_revealView.HoverTooltipsEnabled = true;
                 _revealView.Dashboard = new RVDashboard(stream);
             }
             else
