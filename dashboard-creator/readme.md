@@ -1,15 +1,31 @@
 
 # Creating New Reveal Dashboards with SQL Server in Windows Forms
 
-This guide provides step-by-step instructions to integrate Reveal SDK into a Windows Forms application for handling dashboards. It covers the setup of necessary NuGet packages, dashboard management, and implementation of a user control for dashboard creation.
+This guide provides step-by-step instructions on adding the Reveal Microsoft SQL Server data connector an exiting Windows Forms application that enables creating and editing dashboards.
 
-The Reveal SDK ships as a WPF package, when implementing in a Windows Forms app, you will use the WPF interoperability control Element
+This is Part 2 of a 2 part tutorial.  Part 1 is a set-by-step tutorial where you will learn how to load exisitng dashboards, edit those dashboards and save your edits to disk.
 
-This tutorial expects that you have completed the tutorial _Adding the Reveal SDK to  a Windows Forms Application for Viewing Dashboards.
+You can watch this step-by-step in YouTube.
+
+[![image](https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/228224b1-1458-4a26-b01c-9bff714860a2)](https://www.youtube.com/watch?v=rVV2Fmr4Qrw)
+
+
+
+
+rVV2Fmr4Qrw
+
+
+
+The desktop version of the Reveal SDK ships as a WPF package, when implementing in a Windows Forms app, you will use the WPF interoperability control Element.  
+
+With the Reveal WPF SDK, you will be building a rich client application that handles all of the data access, authentication and querying to your database.
 
 ## Prerequisites
 
-Before you start, ensure you have completed the tutorial _Adding the Reveal SDK to  a Windows Forms Application for Viewing Dashboards.
+Before you start, you need to have complete Part 1: Adding Reveal Dashboards to Windows Forms Apps.
+
+https://github.com/RevealBi/sdk-samples-windows-forms/blob/main/dashboard-viewer/readme.md
+6t![image](https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/b203b7a8-65fc-4a19-84f7-4aaba1139b69)
 
 ## Steps
 
