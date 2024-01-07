@@ -20,6 +20,7 @@ Before you start, ensure you have Visual Studio installed with support for Windo
 
 <img width="600" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/83280184-7127-498a-bc0b-32fef5776f01">
 
+
 ### 2. Add Reveal NuGet Packages
 
 The first thing you need to do is light up this application with Reveal. You do that by adding the Reveal NuGet package for WPF. 
@@ -27,6 +28,8 @@ The first thing you need to do is light up this application with Reveal. You do 
 1 - Right click on your project Project, and select **Manage NuGet Packages** for Solution.
 
 2 - In the package manager dialog, open the **Browse** tab, and install the **Reveal.Sdk.Wpf** NuGet package into the project.
+
+<img width="600" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/bbe46dbb-c8fa-4a04-ba90-8f934e0c3e6e">
 
 Accept all the defaults on the install dialog for the NuGet package. At this point, the core WPF Reveal SDK is installed in your application.
 
@@ -37,7 +40,11 @@ When installing NuGet packages in a Windows Forms or WPF application, you may ne
 
 1. Right-click on the `packages.config` file and select Migrate packages.config to PackageReference.
 
+<img width="595" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/831ae46e-f563-413c-8bc5-f7703f6ba269">
+
 2. Select the Top-Level checkbox in the Migration dialog, then click OK.
+
+<img width="673" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/eef5fc01-fc3d-4b99-9c29-98d7eb8301f2">
 
 After a successful migration, a report is generated and displayed in your default browser.  You can close this assuming there are no errors in the migration.
 
