@@ -101,21 +101,25 @@ static void Main()
 
 Add a new user control to your project named `DashboardCreator.`
 
+<img width="400" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/9d19208d-1054-46c9-a93b-d6cac10c1d82">
+
+
 ### 5. Add ElementHost Control
 
 Add an `ElementHost` control to the `DashboardCreator` by dragging it from the Visual Studio Toolbox onto the UserControl.
 
-![](DraggedImage-1.png)
+In the newly added `ElementHost` control click the Dock in Parent Control option.
 
-Select the newly added ElementHost control and set its `Dock` property to `Fill`.
+<img width="869" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/b138421f-b949-4e78-8d13-4338b2d6faa8">
+
 
 ### 6. Implement DashboardCreator Code-Behind
 
-In `DashboardCreator.cs`:
+Next you will add the code to implement the code in `DashboardCreator.cs` that enables creating and saving new dashboards.
 
 #### a. Add Using Statement
 
-Include the Reveal SDK namespace:
+In `DashboardCreator.cs` add the required namespaces:
 
 ```csharp
 using System.IO;
@@ -132,12 +136,12 @@ Add the following class variables:
 private RevealView _revealView;
 private const string DashboardDirectory = "Dashboards";
 private const string DashboardExtension = ".rdash";
-private readonly string _defaultDirectory;
+private static string _defaultDirectory;
 ```
 
 And in the DashboardCreator constructor, add the code to initialize these new variables:
 
-```c
+```csharp
 _defaultDirectory = Path.Combine(Environment.CurrentDirectory, DashboardDirectory);
 _revealView = new RevealView();
 elementHost1.Child = _revealView;
