@@ -70,11 +70,16 @@ To set up your app with sample dashboards:
 2. Create a folder called `Dashboards` in the root of your project.
 3. Unzip the dashboard-samples.zip file and copy the content to the newly created Dashboards folder.
 
+<img width="375" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/9099accc-e126-4019-983b-628d9eff7b05">
+
 You should have a Sales.rdash and a Marketing.rdash in the `.\Dashboards` folder in your project.  Note that dashboard file names are not case-sensitive.
 
 The `.\Dashboards` folder is where you will load and save the Reveal dashboard files to.  Reveal dashboards are saved in a `JSON` format.  The `JSON` file is simply a `.zip` file renamed with the `.rdash` extension. 
 
 4. Select the Marketing.rdash and Sales.rdash and change their **Build Action** and **Content to Output Directory** properties to `Content` and `Copy if Newer` as this screenshot demonstrates.
+
+<img width="375" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/39e3b7a6-7f9b-46f3-a2b3-0331ae7639cc">
+
 
 This ensures that when working with dashboard files in debug mode, they are loaded and saved from the correct folder in `./bin/debug/dashboards.`
  
@@ -84,6 +89,9 @@ The `RevealView` component  will be holder in a UserControl.
 
 1.  Right-click on your project and select New -\> User Control (Windows Forms) and change the name to `DashboardViewer` then click OK.
 
+<img width="500" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/1a06a7fb-d4d2-4cef-aa14-bd7af9e476d4">
+
+
 ### 6. Add ElementHost Control
 
 The `DashboardViewer` will host the `RevealView` component which is the core  Reveal dashboard component.  However, since this is a WPF component, and you are building a Windows Forms application, you will use the `ElementHost` control to host the `RevealView` WPF control in your Windows Forms app.
@@ -91,6 +99,9 @@ The `DashboardViewer` will host the `RevealView` component which is the core  Re
 1. Open the Toolbox in Visual Studio and search for the ElementHost control
 2. Drag or Double-click the `ElementHost` other add it to the `DashboardViewer` control. 
 3. Click the `Dock in Parent Control` link to dock the control appropriately in the UserControl.
+
+<img width="600" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/d0820507-87b2-4b2a-9925-551daf1a72ba">
+
 
 ### 8. Implement DashboardViewer Code-Behind
 
@@ -229,7 +240,10 @@ LoadDashboard("Sales");
 _revealView.SaveDashboard += RevealView_SaveDashboard;
 ```
 
-At this point, all the necessary code is written to load, edit and save Reveal dashboards in your UserControl.
+At this point, all the necessary code is written to load, edit and save Reveal dashboards in your UserControl. You class file should look similar to the following:
+
+<img width="600" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/a1b4487e-4fac-4911-a681-788a159ff74b">
+
 
 ### 10. Add the DashboardViewer to Form1
 
@@ -243,9 +257,14 @@ To run your application, add the DashboardViewer UserControl to the default Form
 
 Note, you may get a **Dashboard Not Found Error** when you add `DashboardViewer`  to `Form1`.  This won’t happen after you run the application once, as the dashboards will be copied to the bindebug folder.
 
+<img width="600" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/a94c6eac-97cc-4cc7-af88-b1fe1dcf0128">
+
+
 ### Run the Project
 
 Finally, hit F5 or click the Start button to run your project.  You should see the Sales dashboard loaded successfully!
+
+<img width="800" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/27988fbc-39e0-426c-9507-56bd1d4fb469">
 
 
 ### Conclusion
