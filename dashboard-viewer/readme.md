@@ -18,6 +18,8 @@ Before you start, ensure you have Visual Studio installed with support for Windo
 
 1 - In Visual Studio, create a new Windows Forms project using the latest .NET Framework version and name it RevealClient.
 
+<img width="1022" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/83280184-7127-498a-bc0b-32fef5776f01">
+
 ### 2. Add Reveal NuGet Packages
 
 The first thing you need to do is light up this application with Reveal. You do that by adding the Reveal NuGet package for WPF. 
