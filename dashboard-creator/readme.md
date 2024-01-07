@@ -171,7 +171,7 @@ _revealView.DataSourcesRequested += RevealView_DataSourcesRequested;
 
 In the event handler, define two collections; one for the data sources, and one for the data source items. These two collections are used a parameters to the `RevealDataSources` object which is provided in the event handler callback.
 
-```objc
+```csharp
 private void RevealView_DataSourcesRequested(object sender, DataSourcesRequestedEventArgs e)
 {
     var dataSources = new List<RVDashboardDataSource>();
@@ -417,7 +417,7 @@ private void RevealView_DataSourcesRequested(object sender, DataSourcesRequested
 }
 ```
 
-In this case, we are only adding a single dataSourceItem, however, we’ll add more in a minute.
+In this case, we are only adding a single dataSourceItem, however, we’ll add more in a next step.
 
 Click the Start button or hit F5 to run the application.  When the application runs, create a new Visualization and you will see the newly created Microsoft SQL Server data source item called **All Customer Orders** listed in the "Select a Data Source" dialog.
 
