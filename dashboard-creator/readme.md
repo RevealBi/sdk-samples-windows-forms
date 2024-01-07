@@ -7,13 +7,7 @@ This is Part 2 of a 2 part tutorial.  Part 1 is a set-by-step tutorial where you
 
 You can watch this step-by-step in YouTube.
 
-[![image](https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/228224b1-1458-4a26-b01c-9bff714860a2)](https://www.youtube.com/watch?v=rVV2Fmr4Qrw)
-
-
-
-
-rVV2Fmr4Qrw
-
+[![image](https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/a0238f64-92ae-41ef-a938-a97b1558f9be)](https://www.youtube.com/watch?v=rVV2Fmr4Qrw)
 
 
 The desktop version of the Reveal SDK ships as a WPF package, when implementing in a Windows Forms app, you will use the WPF interoperability control Element.  
