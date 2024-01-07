@@ -40,11 +40,11 @@ When installing NuGet packages in a Windows Forms or WPF application, you may ne
 
 1. Right-click on the `packages.config` file and select Migrate packages.config to PackageReference.
 
-<img width="595" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/831ae46e-f563-413c-8bc5-f7703f6ba269">
+<img width="300" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/831ae46e-f563-413c-8bc5-f7703f6ba269">
 
 2. Select the Top-Level checkbox in the Migration dialog, then click OK.
 
-<img width="673" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/eef5fc01-fc3d-4b99-9c29-98d7eb8301f2">
+<img width="400" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/eef5fc01-fc3d-4b99-9c29-98d7eb8301f2">
 
 After a successful migration, a report is generated and displayed in your default browser.  You can close this assuming there are no errors in the migration.
 
