@@ -18,7 +18,7 @@ namespace RevealClient
         private RevealView _revealView;
         private const string DashboardDirectory = "Dashboards";
         private const string DashboardExtension = ".rdash";
-        private readonly string _defaultDirectory;
+        private static string _defaultDirectory;
 
         public DashboardViewer()
         {
@@ -35,7 +35,7 @@ namespace RevealClient
 
         public static Stream GetDashboardStreamFromFile(string dashboardId)
         {
-            var path = Path.Combine(Environment.CurrentDirectory, DashboardDirectory, $"{dashboardId}{DashboardExtension}");
+            var path = Path.Combine(_defaultDirectory, $"{dashboardId}{DashboardExtension}");
             return File.Exists(path) ? File.OpenRead(path) : null;
         }
 
