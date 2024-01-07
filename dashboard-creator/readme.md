@@ -16,10 +16,9 @@ With the Reveal WPF SDK, you will be building a rich client application that han
 
 ## Prerequisites
 
-Before you start, you need to have complete Part 1: Adding Reveal Dashboards to Windows Forms Apps.
+Before you start, you must complete Part 1: Adding Reveal Dashboards to Windows Forms Apps.
 
 https://github.com/RevealBi/sdk-samples-windows-forms/blob/main/dashboard-viewer/readme.md
-6t![image](https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/b203b7a8-65fc-4a19-84f7-4aaba1139b69)
 
 ## Steps
 
@@ -27,17 +26,25 @@ https://github.com/RevealBi/sdk-samples-windows-forms/blob/main/dashboard-viewer
 
 In the previous tutorial, you added the prerequisite `Reveal.Wpf.Sdk` NuGet package.  In this tutorial, you’ll be connecting to a Microsoft SQL Server database.  To accomplish this:
 
-- Right-click on your project and select Manage NuGet Packages
-- Click Browse In the NuGet Package Manager, and search for `Reveal.Sdk.Data.Sql`
-- Select the `Reveal.Sdk.Data.SqlServer` package and install it to your application 
+- Right-click on your project and select Manage NuGet Packages.
+- Click Browse In the NuGet Package Manager, and search for `Reveal.Sdk.Data.Sql`.
+- Select the `Reveal.Sdk.Data.SqlServer` package and install it to your application. 
 
-![](DraggedImage.png)
+<img width="600" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/2fee6c71-d90a-4609-9008-41bb62000a0f">
+
 
 ### 2. Register the Datasource
 
 When you add a new datasource to a Reveal project, you need to register the datasource to make it available for your application. 
 
-Add the following code to the `Program.cs` file to register your newly added SQL Server data connector:
+First, in Program.cs, add the using statements required for Reveal references:
+
+```csharp
+using Reveal.Sdk;
+using Reveal.Sdk.Data;
+```
+
+in the `Main()` constructor in the `Program.cs` file, add the following code to register your newly added Microsoft SQL Server data connector:
 
 ```csharp
  RevealSdkSettings.DataSources.RegisterMicrosoftSqlServer();
@@ -45,7 +52,7 @@ Add the following code to the `Program.cs` file to register your newly added SQL
 
 ### 3. Add DataSource Authentication
 
-To provide authentication credentials to your data source, you must first create a class that implements the IRVAuthenticationProvider interface and implement the `ResolveCredentialsAsync` method.
+To provide authentication credentials to your data source, you must first create a class that implements the `IRVAuthenticationProvider` interface and implement the `ResolveCredentialsAsync` method.
 
 1. Create a folder called Reveal in the root of your project
 2. Add a new class named `AuthenticationProvider`.
@@ -57,7 +64,7 @@ using Reveal.Sdk.Data;
 using Reveal.Sdk.Data.Microsoft.SqlServer;
 ```
  
-Implement the `IRVAuthenticationProvider` interface and add the default ResolveCredentialsAsync member with the following code:  
+Implement the `IRVAuthenticationProvider` interface and add the default `ResolveCredentialsAsync` member with the following code:  
 
 ```csharp
 public class AuthenticationProvider : IRVAuthenticationProvider
@@ -74,15 +81,17 @@ public class AuthenticationProvider : IRVAuthenticationProvider
 }
 ```
 
-Change the “user” and “password” with your SQL Server credentials. Each time a request is made to your data source, the credentials in the AuthenticationProvider are retrieved 
+Change the “user” and “password” with your SQL Server credentials. Each time a request is made to your data source, the credentials in the `AuthenticationProvider` are retrieved 
 
-The final step is to register the AuthenticationProvider with your application.  To do this, add the highlighted line to the Main constructor in the Program.cs file in your application:
+The final step is to register the `AuthenticationProvider` with your application.  To do this, add the highlighted line to the `Main()` constructor in the `Program.cs` file in your application:
 
 ```csharp
 static void Main()
 {
-    RevealSdkSettings.DataSources.RegisterMicrosoftSqlServer();
-    **RevealSdkSettings.AuthenticationProvider = new Reveal.AuthenticationProvider();**
+	...
+
+    // register AuthenticationProvider
+    RevealSdkSettings.AuthenticationProvider = new Reveal.AuthenticationProvider();
 
 	...
 }
