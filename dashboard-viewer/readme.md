@@ -2,7 +2,12 @@
 
 This guide provides step-by-step instructions to integrate Reveal SDK into a Windows Forms application for viewing, editing and saving dashboards. It covers the setup of necessary NuGet packages, loading existing dashboards, and saving dashboards once they are edited and changed.
 
-This is part 1 of a 2 part tutorial.  Part 2 is a set-by-step tutorial where you will learn how to create new dashboards from scratch with data from a Microsoft SQL Server database.
+This is Part 1 of a 2 part tutorial.  Part 2 is a set-by-step tutorial where you will learn how to create new dashboards from scratch with data from a Microsoft SQL Server database.
+
+You can watch this step-by-step in YouTube.
+
+[![image](https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/228224b1-1458-4a26-b01c-9bff714860a2)](https://www.youtube.com/watch?v=4mK1ge5RCr0)
+
 
 The desktop version of the Reveal SDK ships as a WPF package, when implementing in a Windows Forms app, you will use the WPF interoperability control Element.  
 
