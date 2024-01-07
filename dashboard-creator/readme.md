@@ -266,7 +266,8 @@ To add you DashboardCreator UserControl to a Form, do the following:
 
 Your form should look like this:
 
-![](DraggedImage-2.png)
+<img width="700" alt="image" src="https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/a9bdcd05-efb9-4bdc-9aad-fd47ca3643f5">
+
 
 ### 10. Run Form2
 
@@ -280,7 +281,7 @@ static void Main()
 
     Application.EnableVisualStyles();
     Application.SetCompatibleTextRenderingDefault(false);
-    **Application.Run(new Form2());**
+    Application.Run(new Form2());
 }
 ```
 
@@ -288,6 +289,7 @@ Click the Start button or hit F5 to run the application.  When the application r
 
 Your experience should match the same as in this video.
 
+![Create New Dashboard](https://github.com/RevealBi/sdk-samples-windows-forms/assets/18453092/24392d01-58a8-42a2-acd3-4248fbad8a89)
 
 
 ### 11. Adding Curated DataSourceItems for Dashboard Creation
