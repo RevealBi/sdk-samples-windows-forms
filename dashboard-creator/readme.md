@@ -139,13 +139,25 @@ private const string DashboardExtension = ".rdash";
 private static string _defaultDirectory;
 ```
 
-And in the DashboardCreator constructor, add the code to initialize these new variables:
+In the `DashboardViewer` constructor, after the `InitializeComponent` block of code, add the following.
 
 ```csharp
+// use the new hover-tooltip feature
+RevealSdkSettings.EnableActionsOnHoverTooltip = true;
+
+// set the load/save directory
 _defaultDirectory = Path.Combine(Environment.CurrentDirectory, DashboardDirectory);
+
+// add and instantiate the _revealView variable
 _revealView = new RevealView();
+
+// set the Child property of the element host to contain your new _revealView dashboard
 elementHost1.Child = _revealView;
+
+// force the RevealView to start in Edit mode
 _revealView.StartInEditMode = true;
+
+// set the Dashboard of the _revealView to a new instance of an RVDashboard
 _revealView.Dashboard = new RVDashboard();
 ```
 
